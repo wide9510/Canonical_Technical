@@ -13,7 +13,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Conan package handling
 include(${CMAKE_BINARY_DIR}/generators/conan_toolchain.cmake)
 
-find_package(RapidJSON REQUIRED)
 find_package(CURL REQUIRED)
 
 add_executable(releaseInfoCLI 
@@ -28,7 +27,7 @@ target_compile_options(releaseInfoCLI PRIVATE -Wno-deprecated-declarations)
 target_include_directories(releaseInfoCLI
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${RapidJSON_INCLUDE_DIRS}  # Conan sets this path automatically
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/rapidjson/include
 )
 
 target_link_libraries(releaseInfoCLI PRIVATE CURL::libcurl)
