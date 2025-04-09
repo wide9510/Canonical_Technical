@@ -1,0 +1,11 @@
+# conanfile.txt
+[requires]
+rapidjson/1.1.0
+libcurl/7.79.1
+
+[generators]
+CMakeToolchain
+CMakeDeps
+
+[layout]
+cmake_layout

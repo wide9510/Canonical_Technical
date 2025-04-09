@@ -1,3 +1,9 @@
 #Readme
 
-initial commit
+##Build Instructions
+
+###MACOS
+
+###LINUX
+
+###WINDOWS
